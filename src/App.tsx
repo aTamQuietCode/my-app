@@ -16,7 +16,14 @@ interface SquareProps {
 function Square ( { value, onSquareClick }: SquareProps) {
   console.log("マスの値:", value);
   return (
-    <button className = "square" onClick = { onSquareClick }>
+    <button 
+      className = "square" 
+      onClick = { onSquareClick }
+      // スマホの自動機能をオフ
+      autoCapitalize='none'
+      autoCorrect='off'
+      spellCheck="false"
+    >
       {value}
     </button>
   );
